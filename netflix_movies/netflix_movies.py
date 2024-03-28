@@ -28,5 +28,8 @@ plt.ylabel('Duration (min)')
 plt.title('Movie Duration by Year of Release')
 
 plt.show()
+movies_sorted = netflix_df.sort_values("duration", ascending = False)
+longest_movie = movies_sorted.iloc[0]["title"]
+print(longest_movie)
 
 answer = "no"  # Based on visual inspection, we cannot conclude that movies are getting shorter
